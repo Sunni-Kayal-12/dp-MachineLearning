@@ -13,6 +13,7 @@ X = df.drop('species', axis =1)
 X
 
 st.write('**y**')
+y= df.species
 y
 
 with st.expander('data Visualization'):
