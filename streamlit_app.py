@@ -10,10 +10,10 @@ df
 
 st.write('**X**')
 X = df.drop('species', axis =1)
-X
+st.dataframe(X)
 
 st.write('**y**')
-y= df.species
+y= df.['species']
 y
 
 with st.expander('data Visualization'):
@@ -22,7 +22,6 @@ with st.expander('data Visualization'):
 # Data preparations
 with st.sidebar:
   st.header('Input features')
-  # "","bill_depth_mm","flipper_length_mm","body_mass_g"
   island = st.selectbox('Island', ('Biscoe','Dream','Torgerson'))
   gender = st.selectbox('Gender', ('male','female'))
   bill_length_mm = st.slider('Bill length (mm)',32.1, 59.6, 43.9)
@@ -44,7 +43,7 @@ with st.expander('Input features'):
   st.write('**Input penguins**')
   input_df
   st.write('**Combined penguins Data**')
-  input_penguins
+  input_penguins 
 
 
        
