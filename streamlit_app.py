@@ -9,12 +9,12 @@ df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/pe
 df
 
 st.write('**X**')
-X = df.drop('species', axis =1)
-st.dataframe(X)
+X = df.drop('species', axis=1)
+st.dataframe(X)  # Use st.dataframe to display X properly
 
 st.write('**y**')
-y= df.['species']
-y
+y = df['species']
+st.dataframe(y)  # Use st.dataframe to display y properly
 
 with st.expander('data Visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g',color='species')
