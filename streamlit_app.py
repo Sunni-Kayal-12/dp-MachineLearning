@@ -21,7 +21,7 @@ with st.expander('data Visualization'):
 
 # Data preparations
 with st.sidebar:
-  st.header('Input features'(
+  st.header('Input features')
   "","bill_depth_mm","flipper_length_mm","body_mass_g"
   island = st.selectbox('Island', ('Biscoe','Dream','Torgerson'))
   gender = st.selectbox('Gender', ('male','female'))
