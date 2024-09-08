@@ -21,4 +21,4 @@ with st.expander('data Visualization')
 # Data preparations
 with st.sidebar:
   st.header('Input featires')
-  
+
