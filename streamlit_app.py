@@ -76,11 +76,11 @@ clf.fit(X, y)
 
 # apply the model to make predictions using 'input_row' instead of 'input_raw'
 prediction = clf.predict(input_row)
-prediction_probability = clf.predict_proba(input_row)  # Note: use predict_proba, not predict_probability
+prediction_proba = clf.predict_proba(input_row)  # Note: use predict_proba, not predict_probability
 
 # Display results
 st.write("Prediction:", prediction)
-st.write("Prediction Probability:", prediction_probability)
+st.write("Prediction Probability:", prediction_proba)
 
 
 
