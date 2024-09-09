@@ -75,7 +75,7 @@ clf= RandomForestClassifier()
 clf.fit(X, y)
 
 # apply the model to make predictions
-prediction =clf.predict(input_row)
+prediction =clf.predict(input_raw)
 prediction_probability =clf.predict_probability(input_raw)
 prediction
 prediction_probability
