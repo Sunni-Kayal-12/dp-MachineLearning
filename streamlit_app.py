@@ -74,11 +74,14 @@ with st.expander(' Data preparation'):
 clf= RandomForestClassifier()
 clf.fit(X, y)
 
-# apply the model to make predictions
-prediction =clf.predict(input_row)
-prediction_probability =clf.predict_probability(input_row)
-prediction
-prediction_probability
+# apply the model to make predictions using 'input_row' instead of 'input_raw'
+prediction = clf.predict(input_row)
+prediction_probability = clf.predict_proba(input_row)  # Note: use predict_proba, not predict_probability
+
+# Display results
+st.write("Prediction:", prediction)
+st.write("Prediction Probability:", prediction_probability)
+
 
 
 
