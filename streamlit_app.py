@@ -78,13 +78,14 @@ clf.fit(X, y)
 prediction = clf.predict(input_row)
 prediction_proba = clf.predict_proba(input_row)  # Note: use predict_proba, not predict_probability
 
-df_prediction_proba = pd.Dataframe(prediction_proba)
-df_prediction_proba.columns =['Adelie', 'Chinstrap', 'Gentoo']
-prediction_proba
+
+# Convert prediction probabilities into a DataFrame
+df_prediction_proba = pd.DataFrame(prediction_proba)
+df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 
 # Display results
-# st.write("Prediction:", prediction)
-# st.write("Prediction Probability:", prediction_proba)
+st.write("Prediction:", prediction[0])  # Display the predicted class
+st.write("Prediction Probability:", df_prediction_proba)  # Display the probability
 
 
 
