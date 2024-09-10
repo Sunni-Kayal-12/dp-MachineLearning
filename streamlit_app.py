@@ -88,7 +88,7 @@ df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 # st.write("Prediction Probability:", df_prediction_proba)  # Display the probability
 
 df_prediction_proba.rename(columns={0: 'Adelie',
-                                    1: 'Chinstrap;
+                                    1: 'Chinstrap';
                                     2: 'Gentoo'})
 
 # Display predicted species
