@@ -80,14 +80,49 @@ prediction_proba = clf.predict_proba(input_row)  # Note: use predict_proba, not 
 
 
 # Convert prediction probabilities into a DataFrame
-df_prediction_proba = pd.DataFrame(prediction_proba)
+# df_prediction_proba = pd.DataFrame(prediction_proba)
 df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
 
 # Display results
-st.write("Prediction:", prediction[0])  # Display the predicted class
-st.write("Prediction Probability:", df_prediction_proba)  # Display the probability
+# st.write("Prediction:", prediction[0])  # Display the predicted class
+# st.write("Prediction Probability:", df_prediction_proba)  # Display the probability
+
+df_prediction_proba.rename(columns={0: 'Adelie',
+                                    1: 'Chinstrap;
+                                    2: 'Gentoo'})
+
+# Display predicted species
+st.subheader('Predicted Species')
+st.dataframe(df_prediction_proba,
+            column_config={
+            'Adelie',
+            format='%f',
+            width='medium',
+            min_value=0,
+            max_value=1
+          },
+          'Chinstrap': st.column_config.ProgressColumn(
+          Chinstrap',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+                 ),
+                 'Gentoo': st.column_config.ProgressColumn(
+                 'Gentoo',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+             }, hide_index=True)
 
 
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(str(penguins_species][0]))
+                 
+
+          
 
 
 
